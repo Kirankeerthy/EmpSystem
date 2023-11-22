@@ -20,5 +20,12 @@ namespace FirstApi.Controllers
                 return await r.ReadToEndAsync();
             }
         }
+        [HttpGet("/delay")]
+        public async Task<IActionResult> DoSomething()
+        {
+            await Task.Delay(1000);
+            return Ok("Delayed Task");
+        }
+
     }
 }
