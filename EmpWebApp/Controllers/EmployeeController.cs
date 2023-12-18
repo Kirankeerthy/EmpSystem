@@ -13,6 +13,8 @@ namespace EmpWebApp.Controllers
             var employee = EmployeeOperations.GetEmployee();
             return View("EmployeeList", employee);
         }
+
+
         [HttpGet("/search/{eEmpId}")]
         public IActionResult GetEmployeeDetail(int eEmpId)
         {
